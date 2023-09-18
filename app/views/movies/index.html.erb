@@ -7,10 +7,13 @@
       <%= number_to_currency(movie.total_gross, precision: 0) %>
     </li>
     <p>
-      <%= movie.description %>
+      <%= truncate(movie.description, length: 40, separator: ' ') %>
     </p>
     <p>
       <%= movie.released_on %>
+    </p>
+    <p>
+      <%= year_of(movie) %>
     </p>
   <% end %>
 </ul>
