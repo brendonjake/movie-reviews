@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :favorites
   resources :users
   get "signup" => "users#new"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -10,5 +9,6 @@ Rails.application.routes.draw do
 
   resources :movies do
     resources :reviews
+    resources :favorites, only: [:create, :destroy]
   end
 end
