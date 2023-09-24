@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_24_055125) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_24_122303) do
   create_table "characterizations", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "movie_id", null: false
     t.bigint "genre_id", null: false
@@ -46,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_055125) do
     t.string "director"
     t.string "duration"
     t.string "image_file_name"
+    t.string "slug"
   end
 
   create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
